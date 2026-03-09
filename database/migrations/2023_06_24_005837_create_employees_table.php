@@ -70,7 +70,7 @@ return new class extends Migration
             $table->foreignId('emp_Departments_code')
                 ->nullable()
                 ->references('id')
-                ->on('departements')
+                ->on('departments')
                 ->onUpdate('cascade');
 
             $table->foreignId('emp_jobs_id')

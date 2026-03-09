@@ -3,7 +3,7 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
-use App\Models\Departement;
+use App\Models\Department;
 
 class DepartmentSeeder extends Seeder
 {
@@ -11,7 +11,7 @@ class DepartmentSeeder extends Seeder
     {
         for ($i = 1; $i <= 10; $i++) {
 
-            Departement::create([
+            Department::create([
                 'name' => 'Department '.$i,
                 'phones' => '021200000'.$i,
                 'notes' => 'Notes for department '.$i,

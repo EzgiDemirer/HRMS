@@ -190,7 +190,7 @@ Edit
                                  <label>Employee Department</label>
                                  <select name="emp_Departments_code" id="emp_Departments_code" class="form-control select2">
                                     <option value="">Select Department</option>
-                                    @foreach ($other['departements'] as $info)
+                                    @foreach ($other['departments'] as $info)
                                     <option value="{{ $info->id }}" @if(old('emp_Departments_code', $data->emp_Departments_code) == $info->id) selected @endif>
                                        {{ $info->name }}
                                     </option>

@@ -6,7 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Employee;
 use App\Models\Branche;
-use App\Models\Departement;
+use App\Models\Department;
 use App\Models\jobs_categorie;
 use App\Models\Qualification;
 use App\Models\Shifts_type;
@@ -27,7 +27,7 @@ class EmployeesController extends Controller
 
         $other = [];
         $other['branches'] = get_cols_where(new Branche(), array("id", "name"), array("com_code" => $com_code, "active" => 1));
-        $other['departements'] = get_cols_where(new Departement(), array("id", "name"), array("com_code" => $com_code, "active" => 1));
+        $other['departments'] = get_cols_where(new Department(), array("id", "name"), array("com_code" => $com_code, "active" => 1));
         $other['jobs'] = get_cols_where(new jobs_categorie(), array("id", "name"), array("com_code" => $com_code, "active" => 1));
         $other['qualifications'] = get_cols_where(new Qualification(), array("id", "name"), array("com_code" => $com_code, "active" => 1));
         $other['shifts_types'] = get_cols_where(
@@ -121,7 +121,7 @@ class EmployeesController extends Controller
 
         $other = [];
         $other['branches'] = get_cols_where(new Branche(), array("id", "name"), array("com_code" => $com_code, "active" => 1));
-        $other['departements'] = get_cols_where(new Departement(), array("id", "name"), array("com_code" => $com_code, "active" => 1));
+        $other['departments'] = get_cols_where(new Department(), array("id", "name"), array("com_code" => $com_code, "active" => 1));
         $other['jobs'] = get_cols_where(new jobs_categorie(), array("id", "name"), array("com_code" => $com_code, "active" => 1));
         $other['qualifications'] = get_cols_where(new Qualification(), array("id", "name"), array("com_code" => $com_code, "active" => 1));
         $other['shifts_types'] = get_cols_where(

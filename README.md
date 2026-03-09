@@ -1,110 +1,194 @@
-```
-# Laravel Tabanlı Çalışan Yönetim Sistemi
+# HRMS – İnsan Kaynakları Yönetim Sistemi
 
 ## Proje Hakkında
 
-Bu proje Laravel framework kullanılarak geliştirilmiş bir İnsan Kaynakları / Çalışan Yönetim Sistemidir.
+Bu proje **Laravel Framework** kullanılarak geliştirilmiş bir **İnsan Kaynakları Yönetim Sistemi (HRMS)** uygulamasıdır.
 
-Sistem sayesinde yöneticiler:
+Sistem üzerinden çalışan yönetimi, departmanlar, şubeler, vardiyalar ve çeşitli insan kaynakları işlemleri yönetilebilir.
 
-- Çalışan ekleyebilir
-- Çalışan bilgilerini düzenleyebilir
-- Departman ve pozisyon ataması yapabilir
-- Şube ve vardiya yönetimi gerçekleştirebilir
+Proje eğitim ve portföy amaçlı geliştirilmiştir.
 
-Proje, Laravel ile CRUD işlemleri, veritabanı yönetimi ve admin panel geliştirme konularını göstermek amacıyla hazırlanmıştır.
+---
 
-------------------------------------------------
+# Kullanılan Teknolojiler
 
-Özellikler
+* Laravel
+* PHP
+* MySQL
+* Bootstrap
+* jQuery
+* Select2
+* XAMPP
 
-Bu sistem aşağıdaki modülleri içermektedir:
+---
 
-- Çalışan Yönetimi (Ekle / Düzenle / Sil / Listele)
-- Departman Yönetimi
-- İş Kategorileri Yönetimi
-- Şube Yönetimi
-- Vardiya Tipleri Yönetimi
-- Eğitim / Qualification Yönetimi
-- İzin Günleri (Occasions) Yönetimi
-- İşten Ayrılma Sebepleri Yönetimi
+# Sistem Özellikleri
 
-------------------------------------------------
+* Admin giriş sistemi
+* Çalışan ekleme / düzenleme / silme
+* Departman yönetimi
+* Şube yönetimi
+* İş kategorileri yönetimi
+* Eğitim bilgileri yönetimi
+* Vardiya yönetimi
+* Çalışan maaş bilgileri
+* Sigorta bilgileri
+* Çalışan adres ve iletişim bilgileri
+* Demo veri sistemi (Seeder)
 
-Kullanılan Teknolojiler
+---
 
-Projede aşağıdaki teknolojiler kullanılmıştır:
+# Admin Giriş Bilgileri
 
-- Laravel
-- PHP
-- MySQL
-- Blade Template Engine
-- Bootstrap
-- JavaScript
-- jQuery
-- Laravel Migration & Seeder
+Migration çalıştırıldığında admin kullanıcısı otomatik oluşturulur.
 
-------------------------------------------------
+**Kullanıcı Adı:** admin
+**Şifre:** admin
 
-Veritabanı Yapısı
+Admin giriş adresi:
 
-Projede kullanılan temel tablolar:
+```id="login_url"
+http://127.0.0.1:8000/admin/login
+```
 
-- admins
-- employees
-- branches
-- departements
-- jobs_categories
-- qualifications
-- shifts_types
-- resignations
-- occasions
+---
 
-Veritabanı yapısı Laravel migration sistemi ile oluşturulmaktadır.
+# Proje Kurulumu
 
-------------------------------------------------
+Projeyi çalıştırmak için aşağıdaki adımları izleyin.
 
-Kurulum
+### 1. Projeyi klonlayın
 
-1. Projeyi klonlayın
+```bash id="clone_project"
+git clone https://github.com/EzgiDemirer/HRMS.git
+```
 
-git clone https://github.com/kullanici-adi/proje-adi.git
+### 2. Proje klasörüne girin
 
-2. Proje klasörüne girin
+```bash id="enter_project"
+cd HRMS
+```
 
-cd proje-adi
+### 3. Gerekli paketleri yükleyin
 
-3. Gerekli paketleri yükleyin
-
+```bash id="install_dependencies"
 composer install
+```
 
-4. .env dosyasını oluşturun
+### 4. Environment dosyasını oluşturun
 
+```bash id="create_env"
 cp .env.example .env
+```
 
-5. Veritabanı ayarlarını yapın (.env dosyasında)
+### 5. Application key oluşturun
 
-DB_DATABASE=employee_system
+```bash id="generate_key"
+php artisan key:generate
+```
+
+### 6. Veritabanı ayarlarını yapın
+
+`.env` dosyasında aşağıdaki bilgileri düzenleyin.
+
+```env id="database_config"
+DB_DATABASE=hrms
 DB_USERNAME=root
 DB_PASSWORD=
-
-6. Laravel uygulama anahtarını oluşturun
-
-php artisan key:generate
-
-7. Migrationları çalıştırın
-
-php artisan migrate
-
-8. Demo verileri ekleyin
-
-php artisan db:seed
-
-9. Projeyi çalıştırın
-
-php artisan serve
-
-Tarayıcıdan açın:
-
-http://127.0.0.1:8000
 ```
+
+### 7. Migration ve Seeder çalıştırın
+
+```bash id="run_migration"
+php artisan migrate --seed
+```
+
+### 8. Projeyi çalıştırın
+
+```bash id="run_project"
+php artisan serve
+```
+
+---
+
+# Veritabanı Yapısı
+
+Proje aşağıdaki ana tabloları içerir.
+
+### Temel Tablolar
+
+* admins
+* employees
+* branches
+* departements
+* jobs_categories
+* qualifications
+* shifts_types
+
+### Konum Tabloları
+
+Çalışan adres bilgileri için kullanılır.
+
+* countries
+* governorates
+* centers
+
+### Diğer Tablolar
+
+* resignations
+* occasions
+* finance_calenders
+* finance_cln_periods
+
+---
+
+# Ekran Görüntüleri
+
+![SS1](screenshots/ss1.png)
+
+
+
+![SS2](screenshots/ss2.png)
+
+
+
+![SS3](screenshots/ss3.png)
+
+
+
+![SS4](screenshots/ss4.png)
+
+
+
+![SS5](screenshots/ss5.png)
+
+
+
+![SS6](screenshots/ss6.png)
+
+
+
+![SS7](screenshots/ss7.png)
+
+
+
+![SS8](screenshots/ss8.png)
+
+
+
+![SS9](screenshots/ss9.png)
+
+
+
+![SS10](screenshots/ss10.png)
+
+
+
+![SS11](screenshots/ss11.png)
+
+
+
+![SS12](screenshots/ss12.png)
+
+
+

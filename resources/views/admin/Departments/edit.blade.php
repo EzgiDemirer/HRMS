@@ -9,7 +9,7 @@ Settings Menu
 @endsection
 
 @section('contentheaderactivelink')
-<a href="{{ route('departements.index') }}">Departments</a>
+<a href="{{ route('departments.index') }}">Departments</a>
 @endsection
 
 @section('contentheaderactive')
@@ -29,7 +29,7 @@ Edit
 
       <div class="card-body">
 
-         <form action="{{ route('departements.update',$data['id']) }}" method="post">
+         <form action="{{ route('departments.update',$data['id']) }}" method="post">
             @csrf
 
             <div class="col-md-12">
@@ -112,7 +112,7 @@ Edit
                      Update Department
                   </button>
 
-                  <a href="{{ route('departements.index') }}" class="btn btn-danger btn-sm">
+                  <a href="{{ route('departments.index') }}" class="btn btn-danger btn-sm">
                      Cancel
                   </a>
 

@@ -40,7 +40,7 @@
             </li>
 
             <li class="nav-item">
-                <a href="{{ route('departements.index') }}" class="nav-link {{ request()->is('admin/departements*') ? 'active' : '' }}">
+                <a href="{{ route('departments.index') }}" class="nav-link {{ request()->is('admin/departments*') ? 'active' : '' }}">
                     <i class="nav-icon fas fa-building"></i>
                     <p>Departments</p>
                 </a>

@@ -17,7 +17,7 @@ class FinanceCalenderSeeder extends Seeder
                 'FINANCE_YR_DESC' => 'Financial Year ' . $year,
                 'start_date' => $year . '-01-01',
                 'end_date' => $year . '-12-31',
-                'is_open' => 1,
+                'is_open' => ($year == 2025) ? 1 : 0,
                 'com_code' => 1,
                 'added_by' => 1,
                 'updated_by' => 1,

@@ -24,7 +24,7 @@ View
       <div class="card-header">
          <h3 class="card-title card_title_center">
             Employee Departments Data
-            <a href="{{ route('departements.create') }}" class="btn btn-sm btn-warning">Add New</a>
+            <a href="{{ route('departments.create') }}" class="btn btn-sm btn-warning">Add New</a>
          </h3>
       </div>
 
@@ -107,11 +107,11 @@ View
 
                   <td>
 
-                     <a href="{{ route('departements.edit',$info->id) }}" class="btn btn-success btn-sm">
+                     <a href="{{ route('departments.edit',$info->id) }}" class="btn btn-success btn-sm">
                         Edit
                      </a>
 
-                     <a href="{{ route('departements.destroy',$info->id) }}" class="btn are_you_shur btn-danger btn-sm">
+                     <a href="{{ route('departments.destroy',$info->id) }}" class="btn are_you_shur btn-danger btn-sm">
                         Delete
                      </a>
 
